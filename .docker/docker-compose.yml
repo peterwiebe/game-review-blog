@@ -1,0 +1,46 @@
+version: "3.7"
+
+services:
+  nginx:
+    container_name: nginx-react
+    image: game-review-blog/nginx-react
+    build:
+      context: .
+      dockerfile: .docker/nginx-react.dockerfile
+    depends_on:
+      - node
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - game-review-blog-network
+
+  node:
+    container_name: express-api
+    image: game-review-blog/express-api
+    build:
+      context: .
+      dockerfile: .docker/express-api.dockerfile
+    restart: always
+    ports:
+      - "5000"
+    depends_on:
+      - mongo
+    networks:
+      - game-review-blog-network
+
+  mongo:
+    container_name: mongo
+    image: game-review-blog/mongo
+    build:
+      context: .
+      dockerfile: .docker/mongo.dockerfile
+    restart: alwayas
+    ports:
+      - "27017:27017"
+    networks:
+      - game-review-blog-network
+
+networks:
+  game-review-blog-network:
+    driver: bridge
