@@ -3,8 +3,8 @@
 
 ### User Story
 
-As an avid videoo game reviewer 
-I want a way to create blog posts for my videoo game reviews 
+As an avid video game reviewer 
+I want a way to create blog posts for my video game reviews 
 So that I can share my reviews in a way that my readers can respond to
 
 ### Acceptance Criteria
@@ -29,7 +29,7 @@ Qualities of the application:
 - **Must** have a Build system
 - Should be built or compiled in a docker container
 - Should produce a docker container as an artifact
-- Should not have any runtime dependince (datastore needs to be in memory)
+- Should not have any runtime dependencies (datastore needs to be in memory)
 
 ### Expectations
 

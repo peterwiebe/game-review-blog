@@ -1,0 +1,21 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "API service for game-review-blog",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "Peter Wiebe",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "1.19.0"
+  }
+}
