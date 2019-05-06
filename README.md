@@ -1,5 +1,20 @@
 # Game Review Blog
 
+## Requirements
+
+- [Docker v2.0.0.3](https://www.docker.com/products/docker-desktop)
+
+## Getting Started
+
+To run all the services needed run the following command:
+```sh
+# in the root directory
+$ docker-compose -f .docker/docker-compose.yml
+```
+
+OR you can start each service individually by following the appropriate README files:
+- [back-end](back-end/README.md)
+- [frontend](front-end/README.md)
 
 ### User Story
 

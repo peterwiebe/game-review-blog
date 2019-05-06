@@ -4,7 +4,9 @@
   "description": "API service for game-review-blog",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/index.js",
+    "start": "npm run build && NODE_ENV=production node ./build/index.js",
+    "build": "babel src -d build",
+    "dev": "nodemon --exec babel-node ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -13,9 +15,21 @@
   "author": "Peter Wiebe",
   "license": "ISC",
   "dependencies": {
-    "express": "4.16.4"
+    "@babel/polyfill": "^7.4.4",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "4.16.4",
+    "mongoose": "^5.5.5",
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.4.4",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
     "nodemon": "1.19.0"
   }
 }
