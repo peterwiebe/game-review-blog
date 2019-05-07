@@ -1,10 +1,13 @@
 import React from 'react';
+import PostForm from './components/forms/post'
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <PostForm/>
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
