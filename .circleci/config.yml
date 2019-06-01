@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Install front end dependencies
-          command: npm i
+          command: pwd && ls && npm i
       - run:
           name: Execute unit tests
           command: npm test
