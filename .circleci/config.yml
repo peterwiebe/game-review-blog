@@ -12,3 +12,9 @@ jobs:
       - run:
           name: Execute unit tests
           command: npm test
+
+workflows:
+  version: 2
+  buildAndTestFE:
+    jobs:
+      - frontEnd
