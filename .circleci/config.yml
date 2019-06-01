@@ -1,13 +1,14 @@
 version: 2.1
 jobs:
   frontEnd:
+    working_directory: ~/front-end
     docker:
       - image: circleci/node:10.15.1
     steps:
       - checkout
       - run:
         name: Install front end dependencies
-        command: 'cd front-end && npm i'
+        command: npm i
       - run:
         name: Execute unit tests
-        command: 'cd front-end && npm test'
+        command: npm test
