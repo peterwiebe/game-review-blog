@@ -1,11 +1,12 @@
 version: 2.1
 jobs:
   frontEnd:
-    working_directory: ./front-end
+    working_directory: ~/project/front-end
     docker:
       - image: circleci/node:10.15.1
     steps:
-      - checkout
+      - checkout:
+          path: ~/project
       - run:
           name: Install front end dependencies
           command: pwd && ls && npm i
