@@ -7,8 +7,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Install front end dependencies
-        command: npm i
+          name: Install front end dependencies
+          command: npm i
       - run:
-        name: Execute unit tests
-        command: npm test
+          name: Execute unit tests
+          command: npm test
